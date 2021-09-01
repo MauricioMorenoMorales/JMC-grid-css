@@ -165,9 +165,30 @@ img {
 	display: grid;
 	/* Grid de 5cx3r */
 	grid-template-columns: repeat(5, 1fr);
-	grid-template-rows: repeat(5, 150px);
+	grid-template-rows: repeat(3, 150px);
 	grid-auto-flow: row;
-	grid-auto-rows: 100px ;
+	grid-auto-rows: 100px;
 	grid-auto-flow: column;
-	grid-auto-columns: 50px ;
+	grid-auto-columns: 50px;
+}
+
+.grid-flow-dense {
+	display: grid;
+	/* Grid de 5cx4r */
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(4, 200px);
+	grid-auto-flow: row dense;
+	grid-auto-flow: column dense;
+}
+
+/* .grid-flow-dense .item:nth-child(9) {
+  color: cyan;
+  grid-row: span 3;
+  grid-column: span 3;
+} */
+
+.grid-flow-dense .item:nth-child(11) {
+	color: cyan;
+	grid-row: span 3;
+	grid-column: span 3;
 }
